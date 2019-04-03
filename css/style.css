@@ -198,6 +198,56 @@ body {
   font-size: 5em;
 }
 
+.wrapper .main .content h1 span {
+  display: inline-block;
+  opacity: 0;
+}
+
+.wrapper .main .content h1 span:nth-child(1) {
+  -webkit-animation: slideUp 1s ease forwards;
+          animation: slideUp 1s ease forwards;
+}
+
+.wrapper .main .content h1 span:nth-child(2) {
+  -webkit-animation: slideUp 1s ease .2s forwards;
+          animation: slideUp 1s ease .2s forwards;
+}
+
+.wrapper .main .content h1 span:nth-child(3) {
+  -webkit-animation: slideUp 1s ease .4s forwards;
+          animation: slideUp 1s ease .4s forwards;
+}
+
+.wrapper .main .content h1 span:nth-child(4) {
+  -webkit-animation: slideUp 1s ease .6s forwards;
+          animation: slideUp 1s ease .6s forwards;
+}
+
+.wrapper .main .content h1 span:nth-child(5) {
+  -webkit-animation: slideUp 1s ease .8s forwards;
+          animation: slideUp 1s ease .8s forwards;
+}
+
+.wrapper .main .content h1 span:nth-child(6) {
+  -webkit-animation: slideUp 1s ease .8s forwards;
+          animation: slideUp 1s ease .8s forwards;
+}
+
+.wrapper .main .content h1 .typewriter-line {
+  background: rgba(153, 153, 153, 0.2);
+  width: 15px;
+  height: 100%;
+  -webkit-animation: blink 1s linear 1.6s infinite;
+          animation: blink 1s linear 1.6s infinite;
+  color: rgba(153, 153, 153, 0);
+}
+
+@media screen and (min-width: 930px) {
+  .wrapper .main .content h1 .typewriter-line {
+    width: 30px;
+  }
+}
+
 @media screen and (min-width: 930px) {
   .wrapper .main .content h1 {
     font-size: 300px;
@@ -208,6 +258,8 @@ body {
   opacity: .5;
   font-size: 1.3em;
   margin: 20px 0;
+  -webkit-animation: slideRight 1s ease;
+          animation: slideRight 1s ease;
 }
 
 @media screen and (min-width: 930px) {
@@ -226,6 +278,8 @@ body {
   color: white;
   border-radius: 25px;
   margin: 30px auto 40px auto;
+  -webkit-animation: slideLeft 1s ease;
+          animation: slideLeft 1s ease;
 }
 
 @media screen and (min-width: 930px) {
@@ -290,14 +344,20 @@ body {
     margin-top: -140px;
     margin-bottom: 70px;
     float: left;
+    -webkit-animation: slideRight 1s ease;
+            animation: slideRight 1s ease;
   }
   .wrapper .sections-wrapper .cards-wrapper .import {
     float: right;
     margin-top: 200px;
+    -webkit-animation: slideLeft 1s ease;
+            animation: slideLeft 1s ease;
   }
   .wrapper .sections-wrapper .cards-wrapper .renew {
     float: left;
     margin-bottom: -200px;
+    -webkit-animation: slideRight 1s ease;
+            animation: slideRight 1s ease;
   }
 }
 
@@ -353,5 +413,117 @@ body {
 
 .wrapper footer p {
   opacity: .3;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: .5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideLeft {
+  from {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideRight {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

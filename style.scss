@@ -174,6 +174,42 @@ body {
 			h1 {
 				font-size: 5em;
 
+				span {
+					display: inline-block;
+					opacity: 0;
+				}
+
+				span:nth-child(1) {
+					animation: slideUp 1s ease forwards;
+				}
+				span:nth-child(2) {
+					animation: slideUp 1s ease .2s forwards;
+				}
+				span:nth-child(3) {
+					animation: slideUp 1s ease .4s forwards;
+				}
+				span:nth-child(4) {
+					animation: slideUp 1s ease .6s forwards;
+				}
+				span:nth-child(5) {
+					animation: slideUp 1s ease .8s forwards;
+				}
+				span:nth-child(6) {
+					animation: slideUp 1s ease .8s forwards;
+				}
+
+				.typewriter-line {
+					background: rgba(#999, .2);
+					width: 15px;
+					height: 100%;
+					animation: blink 1s linear 1.6s infinite;
+					color: rgba(#999, 0);
+
+					@media screen and (min-width: 930px) {
+						width: 30px;
+					}
+				}
+
 				@media screen and (min-width: 930px) {
 					font-size: 300px;
 				}
@@ -182,6 +218,7 @@ body {
 				opacity: .5;
 				font-size: 1.3em;
 				margin: 20px 0;
+				animation: slideRight 1s ease;
 
 				@media screen and (min-width: 930px) {
 					font-size: 2em;
@@ -195,6 +232,7 @@ body {
 				color: white;
 				border-radius: 25px;
 				margin: 30px auto 40px auto;
+				animation: slideLeft 1s ease;
 				@media screen and (min-width: 930px) {
 					font-size: 1.5em;
 					padding: 20px 70px;
@@ -252,16 +290,19 @@ body {
 					margin-top: -140px;
 					margin-bottom: 70px;
 					float: left;
+					animation: slideRight 1s ease;
 				}
 
 				.import {
 					float: right;
 					margin-top: 200px;
+					animation: slideLeft 1s ease;
 				}
 
 				.renew {
 					float: left;
 					margin-bottom: -200px;
+					animation: slideRight 1s ease;
 				}
 			}
 
@@ -305,5 +346,59 @@ body {
 		p {
 			opacity: .3;
 		}
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+
+	50% {
+		transform: translateY(-30px);
+		opacity: .5;
+	}
+
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes slideLeft {
+	from {
+		transform: translateX(100px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes slideRight {
+	from {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
 	}
 }
