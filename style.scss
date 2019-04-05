@@ -44,13 +44,54 @@ body {
 }
 
 .wrapper {
+	.mobile-menu {
+		//position: absolute;
+		top: 0;
+		left: 0;
+		background: #fff;
+		width: 100vw;
+		height: calc(100vh - 100px);
+		z-index: 50;
+		padding-top: 100px;
+		text-align: center;
+		position: fixed;
+		transform: translateY(-100vh);
+		transition: 1s;
+		a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			padding: 30px;
+			font-size: 3em;
+		}
+
+		.get-started-mobile {
+			display: block;
+			padding: 10px 15px;
+			border: 2px solid rgba(#999, .2);
+			border-radius: 25px;
+			width: fit-content;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: 90%;
+		}
+	}
+
+	.active {
+		transform: translateY(0);
+		transition: 1s;
+	}
+
 	header {
+		background: #fff;
 		width: calc(100vw - 50px);
 		padding: 0 25px;
 		height: 80px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
 		nav,
 		.logo,
 		.ctas {
@@ -74,6 +115,8 @@ body {
 			align-items: center;
 			height: 100%;
 			width: 100%;
+			z-index: 100;
+			background: #fff;
 			a {
 				text-decoration: none;
 				color: inherit;
